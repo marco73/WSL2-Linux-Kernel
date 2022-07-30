@@ -1,6 +1,13 @@
 # Introduction
 
-This fork of the [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel) is about enabling usb devices for use in [WSL2](https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2) kernel.  
+This fork of the [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel) is about enabling usb Wi-Fi adapters in [WSL2](https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2).  
+
+Thanks to:  
+ [Microsoft](https://github.com/microsoft) for their work on [WSL](https://github.com/microsoft/WSL2-Linux-Kernel),  
+ [Frans van Dorsselaer](https://github.com/dorsselaer) for his work on [usbipd-win](https://github.com/dorssel/usbipd-win/releases/latest),  
+ [EDLLT](https://github.com/EDLLT) for his tutorial on how to add a driver,  
+ [mkeydevelop](https://github.com/mkeydevelop) and [rinrin-](https://github.com/rinrin-) for their [help on loading firmware](https://github.com/dorssel/usbipd-win/issues/390#issuecomment-1182724043).
+ 
 # Install Kali-linux
 
 Install Kali-Linux WSL from CLI or Microsoft Store - skip if you already have it running  
