@@ -23,7 +23,7 @@ Install the latest release of [usbipd](https://github.com/dorssel/usbipd-win/rel
 # Prepare dependencies and build environment
 Switch to kali-linux in WSL  
 Install the needed dependencies  
-`sudo apt install usbipd git usbutils make libncurses-dev gcc bison flex dwarves libssl-dev libelf-dev python3 bc wireless-tools`
+`sudo apt install usbip git usbutils make libncurses-dev gcc bison flex dwarves libssl-dev libelf-dev python3 bc wireless-tools`
 
 Clone the Kernel into your WSL, create folder git into your home dir  
 `mkdir ~/git`
