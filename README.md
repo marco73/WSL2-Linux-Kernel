@@ -6,7 +6,8 @@ Thanks to:
  [Microsoft](https://github.com/microsoft) for their work on [WSL](https://github.com/microsoft/WSL2-Linux-Kernel),  
  [Frans van Dorsselaer](https://github.com/dorsselaer) for his work on [usbipd-win](https://github.com/dorssel/usbipd-win/releases/latest),  
  [EDLLT](https://github.com/EDLLT) for his tutorial on how to add a driver,  
- [mkeydevelop](https://github.com/mkeydevelop) and [rinrin-](https://github.com/rinrin-) for their [help on loading firmware](https://github.com/dorssel/usbipd-win/issues/390#issuecomment-1182724043).
+ [mkeydevelop](https://github.com/mkeydevelop) and [rinrin-](https://github.com/rinrin-) for their [help on loading firmware](https://github.com/dorssel/usbipd-win/issues/390#issuecomment-1182724043),  
+ [cerebrate](https://gist.github.com/cerebrate) for his [gist](https://gist.github.com/cerebrate/d40c89d3fa89594e1b1538b2ce9d2720).
  
 # Install Kali-linux
 
