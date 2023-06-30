@@ -39,8 +39,10 @@ Add the location of your driver to `drivers/net/wireless/realtek/Kconfig`, `sour
 Edit the Makefile `drivers/net/wireless/realtek/Makefile` to include the driver location by adding the line `obj-$(CONFIG_RTL8822BU) += rtl88x2bu/`
 
 # Prepare build
+Use the wsl-config
+`cp Microsoft/config-wsl .config`
 Go into the root of the WSL kernel and open menuconfig  
-`make -j $(expr $(nproc) - 1) KCONFIG_CONFIG=Microsoft/config-wsl menuconfig`
+`make menuconfig`
 
 In menu config go to  
 `Device Drivers` ->Select  
