@@ -45,12 +45,46 @@ Use the wsl-config
 Go into the root of the WSL kernel and open menuconfig  
 `make menuconfig`
 
-In menu config go to  
-`Device Drivers` ->Select  
-`Network device support` -> press [space] -> Select  
-`Wireless LAN` -> Enable your device(s) here  
-Select [Save] and save to `Microsoft/config-wsl`
-Select [Exit] until menuconfig is closed.
+In menu config adjust/add the following to enable wireless:  
+```
+-*- Networking support ---> 
+-*- Wireless ---> 
+--- Wireless  
+<M> cfg80211 - wireless configuration API  
+[ ] nl80211 testmode command  
+[ ] enable developer warnings  
+[ ] cfg80211 regulatory debugging  
+[ ] enable powersave by default  
+[ ] cfg80211 DebugFS entries  
+[*] cfg80211 wireless extensions compatibility  
+<M> Generic IEEE 802.11 Networking Stack (mac80211)  
+<M> RF switch subsystem support ----  
+```
+Select the required device drivers (if they exist in the WSL2-Linux-kernel, using Ralink as an example)
+
+```    
+[*] Device Drivers --->  
+[*] Network device support --->  
+[*] Wireless LAN --->  
+<M> Ralink driver support --->  
+--- Ralink driver support  
+< > Ralink rt2400 (PCI/PCMCIA) support  
+< > Ralink rt2500 (PCI/PCMCIA) support  
+< > Ralink rt2501/rt61 (PCI/PCMCIA) support  
+< > Ralink rt27xx/rt28xx/rt30xx (PCI/PCIe/PCMCIA) support  
+< > Ralink rt2500 (USB) support  
+< > Ralink rt2501/rt73 (USB) support  
+<M> Ralink rt27xx/rt28xx/rt30xx (USB) support  
+[*] rt2800usb - Include support for rt33xx devices  
+[*] rt2800usb - Include support for rt35xx devices (EXPERIMENTAL)  
+[*] rt2800usb - Include support for rt3573 devices (EXPERIMENTAL)  
+[*] rt2800usb - Include support for rt53xx devices (EXPERIMENTAL)  
+[*] rt2800usb - Include support for rt55xx devices (EXPERIMENTAL)  
+[*] rt2800usb - Include support for unknown (USB) devices  
+[ ] Ralink debug output  
+```    
+Select [Save] and save to `Microsoft/config-wsl`  
+Select [Exit] until menuconfig is closed.  
 
 # Build the WSL kernel
 
@@ -180,5 +214,3 @@ Enable your Wi-Fi adapter with ifconfig
 `sudo ifconfig wlan0 up`
 
 If no errors are shown your adapter is ready for use in WSL!
-
-
